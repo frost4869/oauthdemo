@@ -12,15 +12,11 @@ import { authorize } from 'react-native-app-auth';
 
 // THIS IS A DEMO
 const config = {
-  issuer: 'https://id.bitpod.io/auth/connect/authorize?redirect_uri=io.identityserver.demo%3A%2Foauthredirect&client_id=5D008E97AE88EC125B223AE1&response_type=code&state=oWnPcoTf6a-d-G5U6xWe-A&scope=openid%20profile%20offline_access%20email%20notification%20baas&code_challenge=8sxPOYcm4ZnELb5LAudGoDYEHI0SgqB1CiCReWBaPq0&code_challenge_method=S256&client_secret=5D008E97AE88EC125B223AE1', // iam using this for the login page
+  issuer: 'https://id.bitpod.io', // iam using this for the login page
   clientId: '5D008E97AE88EC125B223AE1',
   clientSecret: '5D008E97AE88EC125B223AE1',
   redirectUrl: 'io.identityserver.demo:/oauthredirect',
-  scopes: ['openid', 'profile', 'offline_access', 'email', 'notification', 'baas'],
-  serviceConfiguration: {
-    authorizationEndpoint: 'https://login.bitpod.io/auth/connect/authorize',
-    tokenEndpoint: 'https://login.bitpod.io/auth/connect/token',
-  },
+  scopes: ['openid', 'profile', 'offline_access', 'email', 'notification', 'baas']
 };
 
 global.XMLHttpRequest = global.originalXMLHttpRequest
